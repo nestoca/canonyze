@@ -8,7 +8,7 @@ import (
 // New creates a cobra command
 func NewCmd() *cobra.Command {
 	var cmd = &cobra.Command{
-		Use:   "canonize",
+		Use:   "yamlcanonizer",
 		Short: "Canonizes multiple yaml docs for easier comparing",
 		Long:  "Canonizes a set of yaml documents into a standardized and sorted form that is suitable for comparison against another set",
 		Args:  cobra.NoArgs,
