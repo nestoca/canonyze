@@ -1,0 +1,15 @@
+kind: Kind1
+metadata:
+  name: Name1
+---
+kind: Kind1
+metadata:
+  name: Name2
+---
+kind: Kind2
+metadata:
+  name: Name1
+---
+kind: Kind2
+metadata:
+  name: Name2

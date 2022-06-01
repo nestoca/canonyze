@@ -1,0 +1,19 @@
+version: version1
+kind: Kind1
+metadata:
+  name: Name1
+  annotations:
+    annotation2: annotation-value2
+    annotation1: annotation-value1
+spec:
+  def:
+    def: {}
+    abc: {}
+  abc:
+    def: {}
+    abc: {}
+  array:
+    - 456
+    - def
+    - abc
+    - 123
