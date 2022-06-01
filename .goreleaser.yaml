@@ -1,6 +1,6 @@
 project_name: yamlcanonizer
 builds:
-  - dir: cmd/yamlcanonizer
+  - dir: cmd/yamlcanonizer/cmd
     env:
       - CGO_ENABLED=0
     goos:
