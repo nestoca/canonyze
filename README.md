@@ -1,6 +1,6 @@
 # yamlcanonizer
 
-Canonizes a set of yaml documents into a standardized and sorted form that is suitable for comparison against another set
+CLI for standardizing a set of yaml documents into a canonical form suitable for comparison against another set
 
 # Installation
 
