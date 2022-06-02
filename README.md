@@ -1,4 +1,4 @@
-# yamlcanonizer
+# canonyze
 
 CLI for standardizing a set of yaml documents into a canonical form suitable for comparison against another set
 
