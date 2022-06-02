@@ -1,14 +1,14 @@
 package main
 
 import (
-	"github.com/nestoca/yamlcanonizer/cmd/yamlcanonizer/internal"
+	"github.com/nestoca/canonyze/cmd/canonyze/internal"
 	"github.com/spf13/cobra"
 )
 
 // New creates a cobra command
 func NewCmd() *cobra.Command {
 	var cmd = &cobra.Command{
-		Use:   "yamlcanonizer",
+		Use:   "canonyze",
 		Short: "Canonizes multiple yaml docs for easier comparing",
 		Long:  "Canonizes a set of yaml documents into a standardized and sorted form that is suitable for comparison against another set",
 		Args:  cobra.NoArgs,

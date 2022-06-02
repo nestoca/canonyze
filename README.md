@@ -7,8 +7,8 @@ CLI for standardizing a set of yaml documents into a canonical form suitable for
 ## Installing via brew on MacOS (recommended)
 
 ```
-$ brew tap nestoca/yamlcanonizer
-$ brew install yamlcanonizer
+$ brew tap nestoca/canonyze
+$ brew install canonyze
 ```
 
 ## Downloading binary
@@ -21,4 +21,4 @@ Make sure the binary is accessible via your `$PATH`.
 
 This approach requires that you replace both mentions of version number with your desired version in the following command:
 
-$ go install -ldflags "-s -w" github.com/nestoca/yamlcanonizer/cmd/yamlcanonizer@v0.1.2
+$ go install -ldflags "-s -w" github.com/nestoca/canonyze/cmd/canonyze@v0.1.2

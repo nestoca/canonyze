@@ -1,4 +1,4 @@
-module github.com/nestoca/yamlcanonizer
+module github.com/nestoca/canonyze
 
 go 1.16
 
