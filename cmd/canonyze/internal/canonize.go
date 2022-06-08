@@ -63,6 +63,11 @@ type entry struct {
 }
 
 func sortMapping(nodes []*yaml.Node) {
+	// Sort content of nodes recursively
+	for _, node := range nodes {
+		sortNodeContent(node)
+	}
+
 	// Convert nodes to entries for sorting
 	entries := make([]entry, len(nodes)/2)
 	for i := 0; i < len(nodes)/2; i++ {
@@ -82,19 +87,37 @@ func sortMapping(nodes []*yaml.Node) {
 		nodes[i*2] = entries[i].key
 		nodes[i*2+1] = entries[i].value
 	}
+}
 
+func sortSequence(nodes []*yaml.Node) {
 	// Sort content of nodes recursively
 	for _, node := range nodes {
 		sortNodeContent(node)
 	}
+
+	// Are all nodes mappings with a name key?
+	for _, node := range nodes {
+		if node.Kind != yaml.MappingNode {
+			return
+		}
+		name := getMappingScalarByName(node, "name")
+		if name == "" {
+			return
+		}
+	}
+
+	// Sort nodes by name
+	sort.Slice(nodes, func(i, j int) bool {
+		name1 := getMappingScalarByName(nodes[i], "name")
+		name2 := getMappingScalarByName(nodes[j], "name")
+		return name1 < name2
+	})
 }
 
 func sortNodeContent(node *yaml.Node) {
 	switch node.Kind {
 	case yaml.SequenceNode:
-		for _, content := range node.Content {
-			sortNodeContent(content)
-		}
+		sortSequence(node.Content)
 	case yaml.MappingNode:
 		sortMapping(node.Content)
 	}

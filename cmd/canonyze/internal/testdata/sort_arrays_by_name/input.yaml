@@ -1,0 +1,10 @@
+array1:
+  - aaa: aaa
+    zzz: zzz
+    name: ghi
+  - aaa: aaa
+    zzz: zzz
+    name: def
+  - aaa: aaa
+    zzz: zzz
+    name: abc
