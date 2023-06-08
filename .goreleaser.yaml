@@ -30,7 +30,7 @@ changelog:
 brews:
   - tap:
       owner: nestoca
-      name: homebrew-canonyze
+      name: homebrew-public
     homepage: "https://github.com/nestoca/canonyze"
     description: >-
       Canonizes a set of yaml documents into a standardized and sorted form that is suitable for comparison against another set
