@@ -7,7 +7,7 @@ CLI for standardizing a set of yaml documents into a canonical form suitable for
 ## Installing via brew on MacOS (recommended)
 
 ```
-$ brew tap nestoca/canonyze
+$ brew tap nestoca/public
 $ brew install canonyze
 ```
 
